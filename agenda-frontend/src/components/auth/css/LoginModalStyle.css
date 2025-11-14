@@ -1,0 +1,89 @@
+.login-box {
+  background: rgba(0, 20, 40, 0.9);
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: #e0ffff;
+  animation: fadeIn 0.6s ease;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 10px 5px 20px 5px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-field {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 8px;
+  color: #e0ffff;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus-within {
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+  border-color: cyan;
+}
+
+.login-button {
+  background: linear-gradient(90deg, #00ffff, #00bcd4);
+  color: #001a26;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.login-button:hover {
+  background: linear-gradient(90deg, #00bcd4, #00ffff);
+  transform: scale(1.03);
+  box-shadow: 0 0 10px cyan;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(0, 255, 255, 0.2);
+  margin: 10px 0;
+}
+
+.register-text {
+  text-align: center;
+  color: #aee;
+  font-size: 0.9rem;
+}
+
+.register-link {
+  background: none;
+  border: none;
+  color: cyan;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.register-link:hover {
+  color: #00e0e0;
+}
+
+/* animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

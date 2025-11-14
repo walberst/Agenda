@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  agenda-mysql:
+    image: mysql:8.0
+    container_name: agenda-mysql-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: agendadb
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      
+  agenda-api:
+    build:
+      context: .
+      dockerfile: Agenda.Api/Dockerfile
+    container_name: agenda-api-server
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DB_HOST: agenda-mysql
+      DB_USER: root
+      DB_PASSWORD: 123
+      DB_NAME: agendadb
+    depends_on:
+      - agenda-mysql
+
+  agenda-frontend:
+    build:
+      context: .
+      dockerfile: agenda-frontend/Dockerfile
+    container_name: agenda-frontend-spa
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - agenda-api 
+
+volumes:
+  mysql_data:
