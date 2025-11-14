@@ -1,12 +1,13 @@
 <Solution>
   <Folder Name="/Itens de Solução/">
+    <File Path=".gitignore" />
     <File Path="Agenda.sln" />
     <File Path="docker-compose.yml" />
     <File Path="README.md" />
   </Folder>
-  <Project Path="Agenda.Api/Agenda.Api.csproj" />
-  <Project Path="Agenda.Application/Agenda.Application.csproj" />
-  <Project Path="Agenda.Domain/Agenda.Domain.csproj" />
-  <Project Path="Agenda.Infrastructure/Agenda.Infrastructure.csproj" />
-  <Project Path="Agenda.test/Agenda.test.csproj" />
+  <Project Path="../../../../../../Desktop/Agenda/Agenda.Net/Agenda.Api/Agenda.Api.csproj" />
+  <Project Path="../../../../../../Desktop/Agenda/Agenda.Net/Agenda.Application/Agenda.Application.csproj" />
+  <Project Path="../../../../../../Desktop/Agenda/Agenda.Net/Agenda.Domain/Agenda.Domain.csproj" />
+  <Project Path="../../../../../../Desktop/Agenda/Agenda.Net/Agenda.Infrastructure/Agenda.Infrastructure.csproj" />
+  <Project Path="../../../../../../Desktop/Agenda/Agenda.Net/Agenda.test/Agenda.test.csproj" />
 </Solution>
